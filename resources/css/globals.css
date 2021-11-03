@@ -1,0 +1,44 @@
+body {
+    font-family: "Rubik", sans-serif;
+    color: #402B2B;
+    background-color: #FEF8F5;
+}
+
+.container {
+    margin: 0 auto;
+    max-width: 1200px ;
+}
+
+a {
+    text-decoration: none;
+    color: #FFFFFF;
+}
+
+li {
+    display: block;
+}
+
+.default-button {
+    width: 220px;
+    background-color: #EE4D47;
+    border-radius: 5px;
+    text-align: center;
+    padding: 15px 0;
+    border: 0;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.title {
+    display: block;
+    font-weight: 700;
+    color: #EE4D47;
+    font-size: 24px;
+}
+
+.paragraph {
+    color: #402B2B;
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 40px;
+}

@@ -1,0 +1,29 @@
+.header {
+    padding-top: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header__nav ul {
+    display: flex;
+    font-weight: 700;
+}
+
+.header__nav-item {
+    margin-right: 100px;
+    padding: 15px 0;
+}
+
+.header__nav-item_button {
+    margin-right: 100px;
+    width: 160px;
+    background-color: #EE4D47;
+    border-radius: 5px;
+    text-align: center;
+    padding: 15px 0;
+}
+
+.header__title {
+    padding: 15px 0;
+}

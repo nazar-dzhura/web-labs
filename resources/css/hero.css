@@ -1,0 +1,19 @@
+.hero {
+    background: url(../img/svg/background.svg) no-repeat center top;
+    min-height: 1200px;
+    overflow: hidden;
+}
+
+.hero__title {
+    max-width: 750px;
+    font-family: "DM Serif Display", serif;
+    font-size: 100px;
+    text-align: left;
+    font-weight: 400;
+    color: #FFFFFF;
+}
+
+.hero__car {
+    background: url(../img/svg/car.svg) no-repeat left bottom;
+    min-height: 450px;
+}

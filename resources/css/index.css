@@ -1,0 +1,12 @@
+@import "normalize.min.css";
+@import "globals.css";
+@import "header.css";
+@import "hero.css";
+@import "main.css";
+@import "secondary.css";
+@import "footer.css";
+
+body {
+    overflow-x: hidden;
+}
+

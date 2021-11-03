@@ -1,0 +1,29 @@
+.footer {
+    display: flex;
+    justify-content: space-between;
+    height: 205px;
+    background-color: #F16353;
+    width: 100%;
+    margin-top: 180px;
+}
+
+.footer__title {
+    margin: auto;
+}
+
+.footer__social {
+    display: flex;
+    justify-content: space-between;
+    margin: auto;
+}
+
+.footer__social__link {
+    margin-right: 5px;
+    margin-left: 5px;
+}
+
+.footer__branding__date {
+    color: #F8F9FA;
+    margin: auto;
+    font-weight: 700;
+}

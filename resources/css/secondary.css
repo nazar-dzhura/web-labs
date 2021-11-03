@@ -1,0 +1,58 @@
+.secondary__inner {
+    display: flex;
+    flex-direction: column;
+}
+
+.secondary__title {
+    font-family: "DM Serif Display", serif;
+    font-weight: 400;
+    font-size: 48px;
+    line-height: 67px;
+    color: #402B2B;
+}
+
+.secondary__inner {
+    align-items: center;
+}
+
+.secondary__card-container {
+    display: flex;
+}
+
+.secondary__card {
+    height: 420px;
+    width: 360px;
+    background-color: #FFFFFF;
+    border-radius: 10px;
+    position: relative;
+}
+
+.secondary__card-container > .secondary__card ~ .secondary__card  {
+    margin-right: 20px;
+    margin-left: 20px;
+}
+
+.secondary__card-text {
+    line-height: 30px;
+    margin: 50px;
+}
+
+.secondary__client {
+    margin: 50px;
+    display: flex;
+    position: absolute;
+    bottom: 0;
+}
+
+.secondary__client-avatar {
+    border-radius: 100%;
+    width: 60px;
+    height: 60px;
+    margin-right: 20px;
+}
+
+.secondary__client-name {
+    color: #402B2B;
+    font-weight: 700;
+}
+
