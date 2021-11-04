@@ -42,3 +42,15 @@ li {
     font-size: 18px;
     line-height: 40px;
 }
+
+@media only screen and (max-width: 1200px) {
+    .container {
+        max-width: 80%;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .container {
+        max-width: 80%;
+    }
+}

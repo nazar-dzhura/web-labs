@@ -31,3 +31,19 @@
     max-width: 100%;
     margin-bottom: 20px;
 }
+
+.main__wrapper {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+@media screen and (max-width: 768px) {
+    .main__emphasis-text {
+        width: 320px;
+    }
+
+    .main__emphasis {
+        min-width: 320px;
+    }
+}

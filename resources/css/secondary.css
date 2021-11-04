@@ -9,6 +9,7 @@
     font-size: 48px;
     line-height: 67px;
     color: #402B2B;
+    text-align: center;
 }
 
 .secondary__inner {
@@ -17,6 +18,8 @@
 
 .secondary__card-container {
     display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 .secondary__card {
@@ -25,11 +28,14 @@
     background-color: #FFFFFF;
     border-radius: 10px;
     position: relative;
+    margin: 20px;
+    transition: transform .1s ease-in-out 0s, box-shadow .1s ease-in-out 0s;
+    transform: scale(1);
 }
 
-.secondary__card-container > .secondary__card ~ .secondary__card  {
-    margin-right: 20px;
-    margin-left: 20px;
+.secondary__card:hover {
+    transform: scale(1.05);
+    box-shadow: rgba(149, 157, 165, 0.4) 0 8px 24px;
 }
 
 .secondary__card-text {

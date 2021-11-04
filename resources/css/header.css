@@ -27,3 +27,68 @@
 .header__title {
     padding: 15px 0;
 }
+
+.header__menu {
+    display: none;
+    width: 32px;
+    cursor: pointer;
+}
+
+.header__menu > img {
+    max-width: 100%;
+}
+
+.header__menu-icon {
+    width: 40px;
+    fill: #FFFFFF;
+    color: #FFFFFF;
+}
+
+@media screen and (max-width: 1200px) {
+    .header__nav-item {
+        margin-right: 50px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .header__menu {
+        display: block;
+    }
+
+    .header__buy-now {
+        display: none;
+    }
+
+    .header__nav {
+        background: #FEF8F5;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        margin-top: 0;
+        clip-path: circle(0 at top left);
+        transition: clip-path 0.9s ease-in;
+    }
+
+    .header__nav.open {
+        clip-path: circle(1000px at top right);
+    }
+
+    .header__nav ul {
+        flex-direction: column;
+        height: 100%;
+    }
+
+    .header__nav .header__nav-item {
+        margin-right: 0;
+        padding-top: 10vh;
+        flex: 1;
+    }
+
+    .header__nav a {
+        font-weight: 500;
+        display: block;
+        font-size: 32px;
+        color: #402B2B;
+    }
+}
