@@ -1,0 +1,10 @@
+.product-paper {
+    background-color: var(--txt-white);
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    padding: 40px 50px;
+}
+
+.product-paper__image {
+    border-radius: var(--border-radius);
+}

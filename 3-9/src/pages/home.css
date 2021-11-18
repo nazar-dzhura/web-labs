@@ -1,0 +1,21 @@
+.home {
+    background-color: var(--txt-white);
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    padding: 80px 80px !important;
+    margin-bottom: 50px;
+}
+
+.home__image {
+    border-radius: var(--border-radius);
+    width: 90% !important;
+}
+
+.home__title {
+    margin-bottom: 20px !important;
+    color: var(--txt-color);
+}
+
+.home__heading-section {
+    margin-bottom: 50px;
+}

@@ -16,7 +16,7 @@ const style = {
 function Footer(){
     return (
         <footer style={style}>
-            <a href='https://www.linkedin.com/in/nazar-dzhura/'>[in] Nazar Dzhura</a>,  Labs 3-5
+            <a href='https://www.linkedin.com/in/nazar-dzhura/'>[in] Nazar Dzhura</a>,  Labs 3-9
         </footer>
     )
 }
