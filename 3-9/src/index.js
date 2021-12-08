@@ -3,11 +3,15 @@ import ReactDOM from 'react-dom';
 import './assets/css/index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import {Provider} from "react-redux";
+import {store} from "./redux/reducers";
 
 document.title = 'Bookstore Manager'
 
 ReactDOM.render(
-    <App />,
+    <Provider store={store}>
+        <App />
+    </Provider>,
   document.getElementById('root')
 );
 

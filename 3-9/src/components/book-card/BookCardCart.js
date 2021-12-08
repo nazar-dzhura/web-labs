@@ -7,34 +7,15 @@ import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
 import no_image from '../../assets/img/no_image.jpg'
 import './book-card.css'
-import axios from "axios";
-import {API_URL} from "../../utils/consts";
-import ModalFormEdit from "../modal-form/ModalFormEdit";
-import {Link} from "react-router-dom";
+import {useDispatch} from "react-redux";
+import {removeItemAction} from "../../redux/actions/actions";
 
-
-const BookCard = ({id, name, cover, description, price, count, loadResponse}) => {
-    const [open, setOpen] = useState(false);
-
-    const handleClickOpen = (event) => {
-        setOpen(true);
-    };
-
-    const handleClose = () => {
-        setOpen(false);
-    };
-
-    function handleDelete(event) {
-        axios.delete(`${API_URL}${id}`)
-            .then(r => {
-                    loadResponse()
-                    console.log(r.data)
-                }
-            )
+const BookCardCart = ({id, name, cover, description, price, count}) => {
+    const dispatch = useDispatch()
+    const removeItem = (id) => {
+        dispatch(removeItemAction(id))
     }
-
     return (
-        <Link to={`/catalog/${id}`}>
             <Card className="book-card">
                 <CardMedia
                     className="book-card__image"
@@ -47,12 +28,8 @@ const BookCard = ({id, name, cover, description, price, count, loadResponse}) =>
                         <Typography className="book-card__title" component="div" variant="h4">
                             {name}
                         </Typography>
-                        <button className="book-card__delete-button" onClick={handleDelete} >
+                        <button className="book-card__delete-button" onClick={() => removeItem(id)} >
                             <box-icon name='trash'/>
-                        </button>
-                        <ModalFormEdit id={id} name={name} cover={cover} description={description} price={price} count={count} loadResponse={loadResponse} open={open} setOpen={setOpen} handleClose={handleClose}/>
-                        <button className="book-card__edit-button" onClick={handleClickOpen}>
-                            <box-icon name='edit-alt'/>
                         </button>
                         <Typography variant="subtitle1" color="text.secondary" component="div" sx={{my: 2}}>
                             $ {price}
@@ -66,12 +43,11 @@ const BookCard = ({id, name, cover, description, price, count, loadResponse}) =>
                     </CardContent>
                 </Box>
             </Card>
-        </Link>
     );
 }
 
 
-BookCard.propTypes = {
+BookCardCart.propTypes = {
     id: PropTypes.string,
     name: PropTypes.string,
     cover: PropTypes.string,
@@ -81,4 +57,4 @@ BookCard.propTypes = {
     loadResponse: PropTypes.func
 };
 
-export default BookCard;
+export default BookCardCart;

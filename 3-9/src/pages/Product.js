@@ -7,12 +7,22 @@ import Loader from "../components/Loader";
 import {Divider, Grid} from "@material-ui/core";
 import './product.css'
 import Typography from "@mui/material/Typography";
+import {useDispatch} from "react-redux";
+import {addItemAction} from "../redux/actions/actions";
+import Button from "@material-ui/core/Button";
 
 const Product = () => {
-
+    const dispatch = useDispatch()
     const { id } = useParams()
     let product = useAxiosGet(API_URL + id)
     let content = null
+
+    const addItem = (id, name, description, imageURL, price, count) => {
+        const item = {
+            id, name, description, imageURL, price, count
+        }
+        dispatch(addItemAction(item))
+    }
 
     if(product.error){
         content = <div>
@@ -54,6 +64,9 @@ const Product = () => {
                         <Typography variant="subtitle1" color="text.secondary" component="div" sx={{my: 2}}>
                                 Price: {product.data.price}$
                         </Typography>
+                        <Button className="shadow-2xl btn-green" variant="contained" color="primary" style={{margin: 20, float: 'right'}} onClick={() => addItem(product.data.id, product.data.name, product.data.description,product.data.imageURL, product.data.price, product.data.count)}>
+                            Add to cart
+                        </Button>
                     </Grid>
                 </Grid>
             </div>

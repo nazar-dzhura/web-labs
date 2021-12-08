@@ -1,6 +1,6 @@
 import React from 'react'
 import './header.css'
-import {CATALOG_ROUTE, HOME_ROUTE} from "../../utils/routes";
+import {CART_ROUTE, CATALOG_ROUTE, HOME_ROUTE} from "../../utils/routes";
 import {NavLink} from "react-router-dom";
 
 function Header(){
@@ -12,6 +12,7 @@ function Header(){
             <div className="header__navigation">
                 <NavLink to={HOME_ROUTE} className="header__navigation-link" activeClassName="header__navigation-link-active">Home</NavLink>
                 <NavLink to={CATALOG_ROUTE} className="header__navigation-link" activeClassName="header__navigation-link-active">Catalog</NavLink>
+                <NavLink to={CART_ROUTE} className="header__navigation-link" activeClassName="header__navigation-link-active">Cart</NavLink>
             </div>
         </header>
     )

@@ -4,8 +4,9 @@ import Product from "./pages/Product";
 import Footer from "./components/Footer";
 import Header from "./components/header/Header";
 import {BrowserRouter, Route, Routes} from "react-router-dom";
-import {CATALOG_ROUTE, HOME_ROUTE} from "./utils/routes";
+import {CART_ROUTE, CATALOG_ROUTE, HOME_ROUTE} from "./utils/routes";
 import Home from "./pages/Home";
+import Cart from "./pages/Cart";
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
             <Routes>
                 <Route path={HOME_ROUTE} exact element={<Home/>}/>
                 <Route path={CATALOG_ROUTE} element={<Catalog/>}/>
+                <Route path={CART_ROUTE} element={<Cart/>}/>
                 <Route path="/catalog/:id" element={<Product/>}/>
             </Routes>
             <Footer/>
